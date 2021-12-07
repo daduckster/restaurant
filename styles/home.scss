@@ -1,27 +1,130 @@
 @import './_variables';
 
 .home-container {
+	display: grid;
+	grid-template-areas: 'homeHeader homeImage' 'homeMenu homeImage';
+	justify-content: space-between;
+	align-items: center;
+	// grid-template-rows: 1fr;
+	height: 100vh;
+	padding: 0 12vw;
+	position: relative;
+
+	&__welcome {
+		position: absolute;
+		width: 64rem;
+		margin-top: 12rem;
+		opacity: 0.85;
+		z-index: 0;
+	}
 }
 
 .home-header {
+	grid-area: homeHeader;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	border-left: 8px solid $orange;
+	padding: 5rem 3rem 3rem 3rem;
+	z-index: 2;
+
 	&__logo {
+		font-family: 'Arvo', serif;
+		color: $violet-light;
+		font-size: 1.5rem;
+		text-align: center;
+		width: 8rem;
 	}
+
 	&__name {
+		font-family: 'Arvo', serif;
+		color: $violet-dark;
+		font-size: 6.13rem;
+		width: 28rem;
+		font-weight: 400;
+		margin-top: 3rem;
 	}
 }
 
 .home-menu {
+	grid-area: homeMenu;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	border-right: 8px solid $orange;
+	padding-right: 3vw;
+	z-index: 2;
+
 	&__ul {
-		&__li {
+		list-style-type: none;
+		text-align: end;
+		width: fit-content;
+		font-size: 1.6rem;
+		color: $orange;
+		cursor: pointer;
+
+		li {
+			margin-bottom: 1.4rem;
+
+			&:hover {
+				animation: hoverMenu 0.4s ease 0s 1 normal forwards;
+			}
+
+			@keyframes hoverMenu {
+				0% {
+					transform: translateX(0px);
+				}
+
+				100% {
+					transform: translateX(-15px);
+				}
+			}
 		}
 	}
 }
 
 .home-image {
+	grid-area: homeImage;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	height: 100%;
+	position: relative;
+
 	&__orange-rectangle {
+		position: absolute;
+		width: 36.56rem;
+		height: 49.88rem;
+		background-color: $orange;
+		mix-blend-mode: multiply;
+		z-index: 1;
+		margin-left: 4rem;
+		margin-top: 2rem;
 	}
 	&__green-rectangle {
+		position: absolute;
+		width: 36.56rem;
+		height: 49.88rem;
+		background-color: $green;
+		mix-blend-mode: multiply;
+		z-index: 1;
+		margin-right: 4rem;
+		margin-top: 4rem;
 	}
 	&__photo {
+		width: 36.56rem;
+		height: auto;
+		z-index: 2;
+	}
+}
+
+@media (min-width: 1800px) {
+	.home-container {
+		&__welcome {
+			width: 71rem;
+		}
 	}
 }
