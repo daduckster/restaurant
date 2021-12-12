@@ -12,3 +12,47 @@ body {
 	color: $violet;
 	font-size: 16px;
 }
+
+.hidden {
+	display: none;
+}
+
+@keyframes animSlideTopRight {
+	0% {
+		transform: translateX(+80px) translateY(-80px);
+	}
+
+	100% {
+		transform: translateX(0px) translateY(0px);
+	}
+}
+
+@keyframes animSlideTopLeft {
+	0% {
+		transform: translateX(-80px) translateY(-80px);
+	}
+
+	100% {
+		transform: translateX(0px) translateY(0px);
+	}
+}
+
+@keyframes animHoverMenu {
+	0% {
+		transform: translateX(0px);
+	}
+
+	100% {
+		transform: translateX(-15px);
+	}
+}
+
+@keyframes animSlideLeft {
+	0% {
+		transform: translateX(-150px);
+	}
+
+	100% {
+		transform: translateX(0px);
+	}
+}

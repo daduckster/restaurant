@@ -1,4 +1,129 @@
 @import './_variables';
+
+.menu-container {
+	padding-bottom: 1vw;
+
+	&__welcome {
+		display: none;
+	}
+
+	&__footer {
+		grid-area: menuFooter;
+		align-self: flex-end;
+		width: 100%;
+		font-size: 0.75rem;
+		line-height: 120%;
+		color: $green-light;
+		text-align: center;
+		border-right: none;
+	}
+}
+
 .menu-navbar {
-	color: red;
+	position: fixed;
+	&__darken {
+	}
+	&__ul {
+		&__li {
+		}
+	}
+}
+
+.menu-hamburger {
+	position: fixed;
+	top: 3vw;
+	right: 3vw;
+	cursor: pointer;
+
+	&__img {
+		height: 8vw;
+		width: auto;
+	}
+}
+
+.menu-image {
+	background-image: url('/styles/images/menu-photo-mobile.png');
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 33vh;
+
+	&__photo {
+		display: none;
+	}
+}
+
+.menu-header {
+	background-color: $orange;
+	display: flex;
+	align-items: center;
+	height: 15vw;
+	padding-left: 3vw;
+	margin-bottom: 6vw;
+
+	&__header-text {
+		color: $bg-light;
+		font-family: 'Arvo', serif;
+		font-weight: 400;
+		font-size: 7.5vw;
+	}
+}
+
+.menu-plates {
+	display: grid;
+	grid-template-areas: 'menuAppetizers' 'menuMain' 'menuDesserts' 'menuDrinks' 'menuLogo';
+	gap: 6vw;
+
+	&__appetisers {
+		grid-area: menuAppetizers;
+	}
+	&__main {
+		grid-area: menuMain;
+	}
+	&__desserts {
+		grid-area: menuDesserts;
+	}
+	&__drinks {
+		grid-area: menuDrinks;
+	}
+	&__logo {
+		grid-area: menuLogo;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 6vw;
+
+		&__img {
+			width: 55vw;
+			height: auto;
+		}
+	}
+
+	&__all-plates {
+		background-color: $bg-light;
+		padding: 3vw;
+	}
+
+	&__header {
+		font-family: 'Arvo', serif;
+		font-weight: 400;
+		font-size: 6.5vw;
+	}
+
+	&__position {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 5vw;
+
+		&__name {
+			font-size: 5.1vw;
+			width: 70%;
+		}
+		&__price {
+			font-family: 'Arvo', serif;
+			font-weight: 400;
+			color: $orange-dark;
+			font-size: 5.1vw;
+		}
+	}
 }

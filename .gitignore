@@ -1,9 +1,5 @@
 node_modules/
 .DS_Store
-<<<<<<< HEAD
 images/
 *.png
 *.svg
-=======
-images/
->>>>>>> af3b61f163487bb27e36d45ada5473570c597a1c
