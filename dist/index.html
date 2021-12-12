@@ -78,18 +78,36 @@
 
   <div class="menu-container">
 
-    <div class="menu-navbar hidden">
-      <div class="menu-navbar__darken"></div>
-      <ul class="menu-navbar__ul">
-        <li class="menu-navbar__ul__li"> Home </li>
-        <li class="menu-navbar__ul__li"> About Us </li>
-        <li class="menu-navbar__ul__li"> Working Hours</li>
-        <li class="menu-navbar__ul__li"> Contact </li>
-      </ul>
+    <div class="menu-navbar-mobile hidden">
+      <div class="menu-navbar-mobile__darken"></div>
+      <div class="menu-navbar-mobile__container">
+        <ul class="menu-navbar-mobile__ul">
+          <li class="menu-navbar-mobile__ul__li"> <img class="menu-navbar-mobile__ul__img"
+                 src="/styles/images/menu-arrow-orange.svg" alt="icon-arrow-right"> Home </li>
+
+          <li class="menu-navbar-mobile__ul__li"> <img class="menu-navbar-mobile__ul__img"
+                 src="/styles/images/menu-arrow-orange.svg" alt="icon-arrow-right"> About Us </li>
+
+          <li class="menu-navbar-mobile__ul__li"> <img class="menu-navbar-mobile__ul__img"
+                 src="/styles/images/menu-arrow-orange.svg" alt="icon-arrow-right"> Working Hours</li>
+
+          <li class="menu-navbar-mobile__ul__li"> <img class="menu-navbar-mobile__ul__img"
+                 src="/styles/images/menu-arrow-orange.svg" alt="icon-arrow-right"> Contact </li>
+        </ul>
+      </div>
     </div>
 
     <div class="menu-hamburger">
       <img class="menu-hamburger__img" src="/styles/images/menu-hamburger-mobile.svg" alt="hamburger-menu-icon">
+    </div>
+
+    <div class="menu-navbar-desktop">
+      <ul class="menu-navbar-desktop__ul">
+        <li class="menu-navbar-desktop__ul__li"> Home </li>
+        <li class="menu-navbar-desktop__ul__li"> About Us </li>
+        <li class="menu-navbar-desktop__ul__li"> Working Hours </li>
+        <li class="menu-navbar-desktop__ul__li"> Contact </li>
+      </ul>
     </div>
 
     <div class="menu-image">
@@ -103,110 +121,124 @@
     </div>
 
     <div class="menu-plates">
-      <div class="menu-plates__appetisers menu-plates__all-plates">
-        <h3 class="menu-plates__header">APPETIZERS</h3>
 
-        <div class="menu-plates__position">
-          <p class="menu-plates__position__name"> Chili Lime Shrimp Cups </p>
-          <p class="menu-plates__position__price"> 20 CHF </p>
+      <div class="menu-plates__left-column">
+
+        <div class="menu-plates__appetizers menu-plates__all-plates">
+          <h3 class="menu-plates__header">APPETIZERS</h3>
+
+          <div class="menu-plates__position">
+            <p class="menu-plates__position__name"> Chili Lime Shrimp Cups </p>
+            <p class="menu-plates__position__price"> 20 CHF </p>
+          </div>
+
+          <div class="menu-plates__position">
+            <p class="menu-plates__position__name"> Garlic Bread </p>
+            <p class="menu-plates__position__price"> 20 CHF </p>
+          </div>
+
+          <div class="menu-plates__position">
+            <p class="menu-plates__position__name"> Zucchini Chips </p>
+            <p class="menu-plates__position__price"> 20 CHF </p>
+          </div>
+
+          <div class="menu-plates__position">
+            <p class="menu-plates__position__name"> Spring Rolls </p>
+            <p class="menu-plates__position__price"> 20 CHF </p>
+          </div>
         </div>
 
-        <div class="menu-plates__position">
-          <p class="menu-plates__position__name"> Garlic Bread </p>
-          <p class="menu-plates__position__price"> 20 CHF </p>
+        <div class="menu-plates__main menu-plates__all-plates">
+          <h3 class="menu-plates__header"> MAIN</h3>
+
+          <div class="menu-plates__position">
+            <p class="menu-plates__position__name"> Grilled Chicken with Fresh Cherry Salsa </p>
+            <p class="menu-plates__position__price"> 30 CHF </p>
+          </div>
+
+          <div class="menu-plates__position">
+            <p class="menu-plates__position__name"> Spicy Pork Vindaloo </p>
+            <p class="menu-plates__position__price"> 30 CHF </p>
+          </div>
+
+          <div class="menu-plates__position">
+            <p class="menu-plates__position__name"> Palak Paneer </p>
+            <p class="menu-plates__position__price"> 30 CHF </p>
+          </div>
+
+          <div class="menu-plates__position">
+            <p class="menu-plates__position__name"> Bombay Sloppy Joes </p>
+            <p class="menu-plates__position__price"> 30 CHF </p>
+          </div>
+
+          <div class="menu-plates__position">
+            <p class="menu-plates__position__name"> Bombay Grilled Chutney Sandwich </p>
+            <p class="menu-plates__position__price"> 30 CHF </p>
+          </div>
+
+          <div class="menu-plates__position">
+            <p class="menu-plates__position__name"> Butter Chicken </p>
+            <p class="menu-plates__position__price"> 30 CHF </p>
+          </div>
         </div>
 
-        <div class="menu-plates__position">
-          <p class="menu-plates__position__name"> Zucchini Chips </p>
-          <p class="menu-plates__position__price"> 20 CHF </p>
-        </div>
-
-        <div class="menu-plates__position">
-          <p class="menu-plates__position__name"> Spring Rolls </p>
-          <p class="menu-plates__position__price"> 20 CHF </p>
-        </div>
       </div>
 
-      <div class="menu-plates__main menu-plates__all-plates">
-        <h3 class="menu-plates__header"> MAIN</h3>
+      <div class="menu-plates__right-column">
 
-        <div class="menu-plates__position">
-          <p class="menu-plates__position__name"> Grilled Chicken with Fresh Cherry Salsa </p>
-          <p class="menu-plates__position__price"> 30 CHF </p>
+        <div class="menu-plates__desserts menu-plates__all-plates">
+          <h3 class="menu-plates__header">DESSERTS</h3>
+
+          <div class="menu-plates__position">
+            <p class="menu-plates__position__name"> Cheesecake </p>
+            <p class="menu-plates__position__price"> 10 CHF </p>
+          </div>
+
+          <div class="menu-plates__position">
+            <p class="menu-plates__position__name"> Ice Cream of Your Choice </p>
+            <p class="menu-plates__position__price"> 10 CHF </p>
+          </div>
+
+          <div class="menu-plates__position">
+            <p class="menu-plates__position__name"> Apple Roll with Cinnamon </p>
+            <p class="menu-plates__position__price"> 10 CHF </p>
+          </div>
         </div>
 
-        <div class="menu-plates__position">
-          <p class="menu-plates__position__name"> Spicy Pork Vindaloo </p>
-          <p class="menu-plates__position__price"> 30 CHF </p>
+        <div class="menu-plates__logo">
+          <img class="menu-plates__logo__img" src="/styles/images/logo.svg" alt="logo-with-letters-f-and-l">
         </div>
 
-        <div class="menu-plates__position">
-          <p class="menu-plates__position__name"> Palak Paneer </p>
-          <p class="menu-plates__position__price"> 30 CHF </p>
+        <div class="menu-plates__drinks menu-plates__all-plates">
+          <h3 class="menu-plates__header">DRINKS</h3>
+
+          <div class="menu-plates__position">
+            <p class="menu-plates__position__name"> Coca-cola </p>
+            <p class="menu-plates__position__price"> 3 CHF </p>
+          </div>
+
+          <div class="menu-plates__position">
+            <p class="menu-plates__position__name"> Coffee of Your Choice </p>
+            <p class="menu-plates__position__price"> 3 CHF </p>
+          </div>
+
+          <div class="menu-plates__position">
+            <p class="menu-plates__position__name"> Ice Tee (lemon) </p>
+            <p class="menu-plates__position__price"> 3 CHF </p>
+          </div>
+
+          <div class="menu-plates__position">
+            <p class="menu-plates__position__name"> Juice of Your Choice </p>
+            <p class="menu-plates__position__price"> 3 CHF </p>
+          </div>
         </div>
 
-        <div class="menu-plates__position">
-          <p class="menu-plates__position__name"> Bombay Sloppy Joes </p>
-          <p class="menu-plates__position__price"> 30 CHF </p>
+        <div class="menu-plates__logo-mobile">
+          <img class="menu-plates__logo-mobile__img" src="/styles/images/logo.svg" alt="logo-with-letters-f-and-l">
         </div>
 
-        <div class="menu-plates__position">
-          <p class="menu-plates__position__name"> Bombay Grilled Chutney Sandwich </p>
-          <p class="menu-plates__position__price"> 30 CHF </p>
-        </div>
-
-        <div class="menu-plates__position">
-          <p class="menu-plates__position__name"> Butter Chicken </p>
-          <p class="menu-plates__position__price"> 30 CHF </p>
-        </div>
       </div>
 
-      <div class="menu-plates__desserts menu-plates__all-plates">
-        <h3 class="menu-plates__header">DESSERTS</h3>
-
-        <div class="menu-plates__position">
-          <p class="menu-plates__position__name"> Cheesecake </p>
-          <p class="menu-plates__desserts__position__price"> 10 CHF </p>
-        </div>
-
-        <div class="menu-plates__position">
-          <p class="menu-plates__position__name"> Ice Cream of Your Choice </p>
-          <p class="menu-plates__position__price"> 10 CHF </p>
-        </div>
-
-        <div class="menu-plates__position">
-          <p class="menu-plates__position__name"> Apple Roll with Cinnamon </p>
-          <p class="menu-plates__position__price"> 10 CHF </p>
-        </div>
-      </div>
-
-      <div class="menu-plates__drinks menu-plates__all-plates">
-        <h3 class="menu-plates__header">DRINKS</h3>
-
-        <div class="menu-plates__position">
-          <p class="menu-plates__position__name"> Coca-cola </p>
-          <p class="menu-plates__position__price"> 3 CHF </p>
-        </div>
-
-        <div class="menu-plates__position">
-          <p class="menu-plates__position__name"> Coffee of Your Choice </p>
-          <p class="menu-plates__position__price"> 3 CHF </p>
-        </div>
-
-        <div class="menu-plates__position">
-          <p class="menu-plates__position__name"> Ice Tee (lemon) </p>
-          <p class="menu-plates__position__price"> 3 CHF </p>
-        </div>
-
-        <div class="menu-plates__position">
-          <p class="menu-plates__position__name"> Juice of Your Choice </p>
-          <p class="menu-plates__position__price"> 3 CHF </p>
-        </div>
-      </div>
-
-      <div class="menu-plates__logo">
-        <img class="menu-plates__logo__img" src="/styles/images/logo.svg" alt="logo-with-letters-f-and-l">
-      </div>
     </div>
 
     <img class="menu-container__welcome" src="/styles/images/welcome.svg" alt="word-welcome-on-the-background">

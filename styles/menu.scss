@@ -1,6 +1,8 @@
 @import './_variables';
 
 .menu-container {
+	display: grid;
+	grid-template-areas: 'menuImage' 'menuHeader' 'menuPlates' 'menuFooter';
 	padding-bottom: 1vw;
 
 	&__welcome {
@@ -11,21 +13,11 @@
 		grid-area: menuFooter;
 		align-self: flex-end;
 		width: 100%;
-		font-size: 0.75rem;
+		font-size: 0.7rem;
 		line-height: 120%;
 		color: $green-light;
 		text-align: center;
 		border-right: none;
-	}
-}
-
-.menu-navbar {
-	position: fixed;
-	&__darken {
-	}
-	&__ul {
-		&__li {
-		}
 	}
 }
 
@@ -41,9 +33,63 @@
 	}
 }
 
+.menu-navbar-mobile {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 40vw;
+	right: 0;
+	background-color: $violet;
+
+	&__darken {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: $darken;
+		z-index: -1;
+	}
+
+	&__container {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		padding-left: 6vw;
+	}
+
+	&__ul {
+		list-style-type: none;
+		cursor: pointer;
+
+		&__img {
+			height: 3.5vw;
+			width: auto;
+			margin-right: 1vw;
+		}
+
+		&__li {
+			color: $bg;
+			font-size: 5vw;
+			margin-bottom: 3vw;
+
+			&:hover {
+				animation: animFocusMenuMobile 0.4s ease 0s 1 normal forwards;
+			}
+		}
+	}
+}
+
+.menu-navbar-desktop {
+	grid-area: menuNavbar;
+	display: none;
+}
+
 .menu-image {
+	grid-area: menuImage;
 	background-image: url('/styles/images/menu-photo-mobile.png');
-	background-position: bottom;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 33vh;
@@ -54,6 +100,7 @@
 }
 
 .menu-header {
+	grid-area: menuHeader;
 	background-color: $orange;
 	display: flex;
 	align-items: center;
@@ -70,11 +117,23 @@
 }
 
 .menu-plates {
+	grid-area: menuPlates;
 	display: grid;
-	grid-template-areas: 'menuAppetizers' 'menuMain' 'menuDesserts' 'menuDrinks' 'menuLogo';
 	gap: 6vw;
 
-	&__appetisers {
+	&__left-column {
+		display: grid;
+		grid-template-areas: 'menuAppetizers' 'menuMain';
+		gap: 6vw;
+	}
+
+	&__right-column {
+		display: grid;
+		grid-template-areas: 'menuDesserts' 'menuDrinks' 'menuLogoMobile';
+		gap: 6vw;
+	}
+
+	&__appetizers {
 		grid-area: menuAppetizers;
 	}
 	&__main {
@@ -85,18 +144,6 @@
 	}
 	&__drinks {
 		grid-area: menuDrinks;
-	}
-	&__logo {
-		grid-area: menuLogo;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 6vw;
-
-		&__img {
-			width: 55vw;
-			height: auto;
-		}
 	}
 
 	&__all-plates {
@@ -124,6 +171,354 @@
 			font-weight: 400;
 			color: $orange-dark;
 			font-size: 5.1vw;
+		}
+	}
+
+	&__logo {
+		display: none;
+	}
+
+	&__logo-mobile {
+		grid-area: menuLogoMobile;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 6vw;
+
+		&__img {
+			width: 55vw;
+			height: auto;
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE - HORIZONTAL
+@media screen and (max-height: 567px) {
+	.menu-container {
+		padding-bottom: 1vh;
+
+		&__footer {
+			margin-top: 6vh;
+		}
+	}
+
+	.menu-hamburger {
+		top: 3vh;
+		right: 3vh;
+
+		&__img {
+			height: 8vh;
+		}
+	}
+
+	.menu-navbar-mobile {
+		left: 60vw;
+
+		&__container {
+			padding-left: 6vh;
+		}
+
+		&__ul {
+			&__img {
+				height: 3.5vh;
+				margin-right: 1vh;
+			}
+
+			&__li {
+				font-size: 5vh;
+				margin-bottom: 3vh;
+			}
+		}
+	}
+
+	.menu-image {
+		height: 33vh;
+	}
+
+	.menu-header {
+		height: 15vh;
+		padding-left: 3vh;
+		margin-bottom: 6vh;
+
+		&__header-text {
+			font-size: 7.5vh;
+		}
+	}
+
+	.menu-plates {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 6vh;
+
+		&__left-column {
+			display: grid;
+			grid-template-areas: 'menuAppetizers' 'menuMain';
+			gap: 6vh;
+		}
+
+		&__right-column {
+			display: grid;
+			grid-template-areas: 'menuDrinks' 'menuLogo' 'menuDesserts';
+			gap: 6vh;
+		}
+
+		&__appetisers {
+			grid-area: menuAppetizers;
+		}
+		&__main {
+			grid-area: menuMain;
+		}
+		&__desserts {
+			grid-area: menuDesserts;
+		}
+		&__drinks {
+			grid-area: menuDrinks;
+		}
+
+		&__all-plates {
+			padding: 3vh;
+		}
+
+		&__header {
+			font-size: 6.5vh;
+		}
+
+		&__position {
+			margin-top: 5vh;
+
+			&__name {
+				font-size: 5.1vh;
+				width: 70%;
+			}
+			&__price {
+				font-size: 5.1vh;
+			}
+		}
+
+		&__logo {
+			grid-area: menuLogo;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 0;
+
+			&__img {
+				width: 55vh;
+				height: auto;
+			}
+		}
+
+		&__logo-mobile {
+			display: none;
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// TABLET
+@media screen and (min-height: 568px) and (min-width: 613px) {
+	.menu-container {
+		align-items: flex-start;
+		height: 100vh;
+		grid-template-rows: auto auto 1fr auto;
+		padding-bottom: 0.2rem;
+
+		&__footer {
+			margin-top: 1vh;
+		}
+	}
+
+	.menu-hamburger {
+		top: 2vh;
+		right: 2vh;
+
+		&__img {
+			height: 3vh;
+		}
+	}
+
+	.menu-navbar-mobile {
+		left: 60vw;
+
+		&__container {
+			padding-left: 3vh;
+		}
+
+		&__ul {
+			&__img {
+				height: 1.9vh;
+				margin-right: 0.7vh;
+			}
+
+			&__li {
+				font-size: 2.6vh;
+				margin-bottom: 3vh;
+			}
+		}
+	}
+
+	.menu-image {
+		height: 26vh;
+	}
+
+	.menu-header {
+		height: 6vh;
+		padding-left: 3.7vh;
+		margin-bottom: 2vh;
+
+		&__header-text {
+			font-size: calc(1.5rem + 0.9vmin);
+		}
+	}
+
+	.menu-plates {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		height: 100%;
+		gap: 2vh;
+		padding: 0 2vh;
+
+		&__left-column {
+			display: grid;
+			grid-template-areas: 'menuAppetizers' 'menuMain';
+			gap: 2vh;
+		}
+
+		&__right-column {
+			display: grid;
+			grid-template-areas: 'menuDesserts' 'menuLogo' 'menuDrinks';
+			gap: 2vh;
+		}
+
+		&__appetizers {
+			grid-area: menuAppetizers;
+		}
+		&__main {
+			grid-area: menuMain;
+		}
+		&__desserts {
+			grid-area: menuDesserts;
+		}
+		&__drinks {
+			grid-area: menuDrinks;
+		}
+
+		&__all-plates {
+			padding: 1.7vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&__header {
+			font-size: calc(1rem + 0.9vmin);
+		}
+
+		&__position {
+			margin-top: 1vh;
+
+			&__name {
+				font-size: calc(0.75rem + 0.8vmin);
+				width: 70%;
+				line-height: 120%;
+			}
+			&__price {
+				font-size: calc(0.75rem + 0.8vmin);
+			}
+		}
+
+		&__logo {
+			grid-area: menuLogo;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 0;
+
+			&__img {
+				height: 10vh;
+				width: auto;
+			}
+		}
+
+		&__logo-mobile {
+			display: none;
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// DESKTOP - NARROW + IPAD PRO HORIZONTAL
+@media screen and (min-width: 1025px) {
+	.menu-container {
+		grid-template-areas: 'menuImage' 'menuHeader' 'menuPlates' 'menuFooter';
+
+		&__welcome {
+		}
+
+		&__footer {
+		}
+	}
+
+	.menu-hamburger {
+		display: none;
+	}
+
+	.menu-navbar-mobile {
+		display: none;
+	}
+
+	.menu-navbar-desktop {
+		grid-area: menuNavbar;
+		display: inline-block;
+		&__ul {
+			&__li {
+			}
+		}
+	}
+
+	.menu-image {
+		background-image: none;
+
+		&__photo {
+		}
+
+		&__green-rectangle {
+		}
+
+		&__orange-rectangle {
+		}
+	}
+
+	.menu-header {
+		&__header-text {
+		}
+	}
+
+	.menu-plates {
+		&__left-column {
+		}
+
+		&__right-column {
+		}
+
+		&__all-plates {
+		}
+
+		&__header {
+		}
+
+		&__position {
+			&__name {
+			}
+
+			&__price {
+			}
+		}
+
+		&__logo {
+			&__img {
+			}
 		}
 	}
 }

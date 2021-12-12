@@ -16,7 +16,7 @@
 		grid-area: homeFooter;
 		align-self: flex-end;
 		width: 100%;
-		font-size: 0.75rem;
+		font-size: 0.7rem;
 		line-height: 120%;
 		color: $green-light;
 		text-align: center;
@@ -121,6 +121,7 @@
 	}
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////
 // MOBILE - HORIZONTAL
 @media screen and (max-height: 567px) {
 	.home-container {
@@ -193,6 +194,7 @@
 	}
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////
 // TABLET
 @media screen and (min-height: 568px) and (min-width: 613px) and (max-width: 1024px) {
 	.home-container {
@@ -287,6 +289,7 @@
 	}
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////
 // DESKTOP - NARROW + IPAD PRO HORIZONTAL
 @media screen and (min-width: 1025px) {
 	.home-container {
@@ -424,6 +427,7 @@
 	}
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////
 // DESKTOP - WIDE
 @media screen and (min-width: 1367px) {
 	.home-container {

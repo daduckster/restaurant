@@ -37,6 +37,16 @@ body {
 	}
 }
 
+@keyframes animSlideLeft {
+	0% {
+		transform: translateX(-150px);
+	}
+
+	100% {
+		transform: translateX(0px);
+	}
+}
+
 @keyframes animHoverMenu {
 	0% {
 		transform: translateX(0px);
@@ -47,12 +57,12 @@ body {
 	}
 }
 
-@keyframes animSlideLeft {
+@keyframes animFocusMenuMobile {
 	0% {
-		transform: translateX(-150px);
+		transform: translateX(0px);
 	}
 
 	100% {
-		transform: translateX(0px);
+		transform: translateX(15px);
 	}
 }
