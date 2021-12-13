@@ -11,6 +11,7 @@ body {
 	font-family: 'Poppins', sans-serif;
 	color: $violet;
 	font-size: 16px;
+	font-weight: 300;
 }
 
 .hidden {
@@ -64,5 +65,15 @@ body {
 
 	100% {
 		transform: translateX(15px);
+	}
+}
+
+@keyframes animHoverMenuPages {
+	0% {
+		transform: translateY(0px);
+	}
+
+	100% {
+		transform: translateY(8px);
 	}
 }

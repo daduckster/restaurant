@@ -449,14 +449,35 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 // DESKTOP - NARROW + IPAD PRO HORIZONTAL
-@media screen and (min-width: 1025px) {
+@media screen and (min-height: 568px) and (min-width: 1025px) {
 	.menu-container {
-		grid-template-areas: 'menuImage' 'menuHeader' 'menuPlates' 'menuFooter';
+		grid-template-areas: ' menuNavbar menuImage' 'menuHeader menuImage' 'menuPlates menuImage' 'menuPlates menuBuffer'
+			'menuFooter menuBuffer';
+		grid-template-columns: auto auto;
+		height: 100vh;
+		padding: 0 calc((100vw - 100vh) / 3);
 
 		&__welcome {
+			display: inline-block;
+			position: absolute;
+			width: 120vh;
+			bottom: 0rem;
+			left: 0;
+			z-index: -2;
+			animation: animSlideLeft 2s ease 0s 1 normal forwards;
 		}
 
 		&__footer {
+			text-align: start;
+			height: fit-content;
+			margin-bottom: 0.5vh;
+		}
+
+		&__buffer {
+			grid-area: menuBuffer;
+			border-left: 0.8vh solid $orange;
+			height: 35vh;
+			align-self: flex-end;
 		}
 	}
 
@@ -471,54 +492,123 @@
 	.menu-navbar-desktop {
 		grid-area: menuNavbar;
 		display: inline-block;
+		margin-bottom: 2vh;
+		margin-top: 1vh;
+
 		&__ul {
+			cursor: pointer;
+			list-style-type: none;
+			display: flex;
+			color: $orange-dark;
+
 			&__li {
+				font-size: 1.9vh;
+				margin-right: 4vh;
+				border-bottom: 0.4vh solid $green-light;
+
+				&:hover {
+					animation: animHoverMenuPages 0.4s ease 0s 1 normal forwards;
+				}
 			}
 		}
 	}
 
 	.menu-image {
 		background-image: none;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		height: auto;
+		position: relative;
+		background-image: none;
+		padding-left: 3vh;
 
 		&__photo {
+			display: inline-block;
+			height: 55vh;
 		}
 
 		&__green-rectangle {
+			position: absolute;
+			width: 35vh;
+			height: 55vh;
+			background-color: $green;
+			mix-blend-mode: multiply;
+			margin-right: 6vh;
+			margin-top: 6vh;
+			z-index: -1;
+			animation: animSlideTopLeft 2s ease 0s 1 normal forwards;
 		}
 
 		&__orange-rectangle {
+			position: absolute;
+			width: 35vh;
+			height: 55vh;
+			background-color: $orange;
+			mix-blend-mode: multiply;
+			margin-left: 6vh;
+			margin-top: 3vh;
+			z-index: -1;
+			animation: animSlideTopRight 2s ease 0s 1 normal forwards;
 		}
 	}
 
 	.menu-header {
+		margin-right: 4vw;
+		height: 6.5vh;
 		&__header-text {
+			font-size: 3.2vh;
 		}
 	}
 
 	.menu-plates {
+		padding: 0;
+		gap: 2vw;
+		height: fit-content;
+		margin-right: 4vw;
+		background-color: $bg-light;
+
 		&__left-column {
+			gap: 0;
 		}
 
 		&__right-column {
+			align-items: space-between;
+			gap: 0;
 		}
 
 		&__all-plates {
+			padding: 2vw;
 		}
 
 		&__header {
+			margin-bottom: 1vh;
 		}
 
 		&__position {
+			margin-top: 1.7vh;
 			&__name {
+				font-size: 1.9vh;
+				width: 60%;
 			}
 
 			&__price {
+				font-size: 1.9vh;
 			}
 		}
 
 		&__logo {
+			background-color: $bg-light;
 			&__img {
 			}
 		}
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// DESKTOP - WIDE
+@media screen and (min-width: 1367px) {
+	.menu-container {
+		padding: 0 calc((100vw - 100vh) / 3);
 	}
 }
