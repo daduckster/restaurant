@@ -291,7 +291,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 // DESKTOP - NARROW + IPAD PRO HORIZONTAL
-@media screen and (min-width: 1025px) {
+@media screen and (min-height: 568px) and (min-width: 1025px) {
 	.home-container {
 		grid-template-areas: 'homeLogo homeImage' 'homeName homeImage' 'homeMenu homeImage' 'homeFooter homeImage';
 		grid-template-columns: auto auto;
