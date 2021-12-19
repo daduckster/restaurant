@@ -1,5 +1,8 @@
 @import './_variables';
 
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE
+
 .menu-container {
 	display: grid;
 	grid-template-areas: 'menuImage' 'menuHeader' 'menuPlates' 'menuFooter';

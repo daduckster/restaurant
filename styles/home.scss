@@ -1,5 +1,8 @@
 @import './_variables';
 
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE
+
 .home-container {
 	display: grid;
 	grid-template-areas: 'homeLogo homeMenu' 'homeImage homeImage' 'homeName homeName' 'homeFooter homeFooter';
@@ -196,7 +199,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 // TABLET
-@media screen and (min-height: 568px) and (min-width: 613px) and (max-width: 1024px) {
+@media screen and (min-height: 568px) and (min-width: 613px) {
 	.home-container {
 		grid-template-areas: 'homeMenu homeMenu' 'homeImage homeImage' 'homeName  homeLogo' 'homeFooter homeFooter';
 		grid-template-columns: 1fr 2fr;
@@ -204,6 +207,22 @@
 
 		&__footer {
 			border-right: none;
+		}
+	}
+
+	.home-logo {
+		grid-area: homeLogo;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-right: 4vw;
+		padding-left: 0;
+		height: 100%;
+		border-left: none;
+
+		&__img {
+			width: 18vh;
+			height: auto;
 		}
 	}
 
@@ -271,22 +290,6 @@
 			width: 50vh;
 		}
 	}
-
-	.home-logo {
-		grid-area: homeLogo;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding-right: 4vw;
-		padding-left: 0;
-		height: 100%;
-		border-left: none;
-
-		&__img {
-			width: 18vh;
-			height: auto;
-		}
-	}
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -339,22 +342,6 @@
 		}
 	}
 
-	.home-name {
-		grid-area: homeName;
-		display: flex;
-		align-items: center;
-		padding-left: 0;
-		height: 100%;
-		width: 51vh;
-		padding-top: 0;
-		border-left: 0.8vh solid $orange;
-		padding: 8vh 0vw 2rem 2vw;
-
-		&__h1 {
-			font-size: 9.5vh;
-		}
-	}
-
 	.home-menu {
 		grid-area: homeMenu;
 		height: 100%;
@@ -398,6 +385,23 @@
 		position: relative;
 		background-image: none;
 
+		&__photo {
+			display: inline-block;
+			height: 85vh;
+			width: auto;
+		}
+
+		&__green-rectangle {
+			position: absolute;
+			width: 62vh;
+			height: 85vh;
+			background-color: $green;
+			mix-blend-mode: multiply;
+			margin-left: -3vh;
+			margin-top: 6vh;
+			animation: animSlideTopLeft 2s ease 0s 1 normal forwards;
+		}
+
 		&__orange-rectangle {
 			position: absolute;
 			width: 62vh;
@@ -408,21 +412,21 @@
 			margin-top: 3vh;
 			animation: animSlideTopRight 2s ease 0s 1 normal forwards;
 		}
+	}
 
-		&__green-rectangle {
-			position: absolute;
-			width: 62vh;
-			height: 85vh;
-			background-color: $green;
-			mix-blend-mode: multiply;
-			margin-right: 6vh;
-			margin-top: 6vh;
-			animation: animSlideTopLeft 2s ease 0s 1 normal forwards;
-		}
-		&__photo {
-			display: inline-block;
-			height: 85vh;
-			width: auto;
+	.home-name {
+		grid-area: homeName;
+		display: flex;
+		align-items: center;
+		padding-left: 0;
+		height: 100%;
+		width: 51vh;
+		padding-top: 0;
+		border-left: 0.8vh solid $orange;
+		padding: 8vh 0vw 2rem 2vw;
+
+		&__h1 {
+			font-size: 9.5vh;
 		}
 	}
 }

@@ -1,0 +1,314 @@
+@import './_variables';
+@import './menu.scss';
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE
+
+.info-container {
+	display: grid;
+	grid-template-areas: 'infoData' 'infoAbout' 'logoMobile' 'menuFooter';
+	padding-bottom: 1vmin;
+	&__image-container {
+		&__img {
+			display: none;
+		}
+	}
+}
+
+.info-data {
+	grid-area: infoData;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background-image: url('/styles/images/info-photo-mobile.png');
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 85vh;
+
+	&__hours {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: $green-glass;
+		height: 30vmin;
+		padding-left: 3vmin;
+
+		&__p {
+			color: $bg-light;
+			font-family: 'Arvo', serif;
+			font-weight: 400;
+			font-size: 7.5vmin;
+			margin: 1vmin 0;
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: $orange-glass;
+		padding-left: 3vmin;
+		height: 45vmin;
+
+		&__title {
+			color: $bg-light;
+			font-family: 'Arvo', serif;
+			font-weight: 400;
+			font-size: 7.5vmin;
+			margin-bottom: 2vmin;
+		}
+		&__contact-data {
+			color: $bg-light;
+			font-size: 5.5vmin;
+		}
+	}
+
+	&__logo {
+		display: none;
+	}
+}
+
+.info-about {
+	grid-area: infoAbout;
+	padding: 15vmin 2vmin 0 2vmin;
+	&__title {
+		color: $orange-dark;
+		font-family: 'Arvo', serif;
+		font-weight: 400;
+		font-size: 7.5vmin;
+	}
+	&__text {
+		font-size: 5.5vmin;
+		margin-top: 8vmin;
+	}
+}
+
+.info-logo-mobile {
+	grid-area: logoMobile;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10vmin 2vmin 10vmin 2vmin;
+
+	&__img {
+		height: 30vmin;
+		width: auto;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE - HORIZONTAL
+@media screen and (max-height: 567px) {
+	.menu-container {
+		&__footer {
+			margin-top: 0;
+		}
+	}
+
+	.info-data {
+		height: 100vh;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// TABLET
+@media screen and (min-height: 568px) and (min-width: 613px) {
+	.menu-container {
+		&__footer {
+			margin-bottom: 0.2rem;
+		}
+	}
+
+	.info-container {
+		display: grid;
+		grid-template-areas: 'infoAbout infoAbout' 'infoData infoImage' 'menuFooter infoImage';
+		grid-template-rows: auto 1fr;
+		padding-bottom: 0;
+		gap: 0 2vh;
+		height: 100vh;
+
+		&__image-container {
+			grid-area: infoImage;
+			background-image: url('/styles/images/info-photo-tablet.png');
+			background-position: top;
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin-top: 2vh;
+		}
+	}
+
+	.info-data {
+		background: none;
+		justify-content: space-between;
+		height: 100%;
+		margin-top: 2vh;
+
+		&__hours {
+			align-items: center;
+			background-color: $green;
+			padding-left: 2vh;
+			height: 12vh;
+
+			&__p {
+				font-size: calc(1.5rem + 0.9vmin);
+			}
+		}
+
+		&__contacts {
+			padding-left: 2vh;
+			background: none;
+			margin-top: 5vh;
+			height: fit-content;
+
+			&__title {
+				font-size: calc(1.5rem + 0.9vmin);
+				color: $orange-dark;
+			}
+
+			&__contact-data {
+				font-size: calc(0.75rem + 0.8vmin);
+				color: $violet;
+			}
+		}
+
+		&__logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-grow: 1;
+
+			&__img {
+				height: 13vh;
+				width: auto;
+			}
+		}
+	}
+
+	.info-about {
+		padding: 7vh 2vh 5vh 2vh;
+		height: fit-content;
+		&__title {
+			font-size: calc(1.5rem + 0.9vmin);
+		}
+		&__text {
+			font-size: calc(0.75rem + 0.8vmin);
+			margin-top: 3vh;
+		}
+	}
+
+	.info-logo-mobile {
+		display: none;
+	}
+}
+
+// DESKTOP - NARROW + IPAD PRO HORIZONTAL
+@media screen and (min-height: 568px) and (min-width: 1025px) {
+	.info-container {
+		grid-template-areas: 'menuNavbar infoImage' 'infoAbout infoImage' 'infoData infoImage' 'menuFooter infoImage';
+		grid-template-rows: auto auto auto 1fr;
+		padding: 0 calc((100vw - 100vh) / 6);
+
+		&__image-container {
+			background: none;
+			margin-top: 0;
+
+			&__img {
+				display: inline-block;
+				height: 100vh;
+				width: auto;
+				animation: animSlideRight 2s ease 0s 1 normal forwards;
+			}
+		}
+	}
+
+	.info-data {
+		display: grid;
+		grid-template-areas: 'hours hours' 'logo contacts';
+		align-items: flex-start;
+		gap: 7vh;
+
+		&__hours {
+			grid-area: hours;
+			flex-direction: row;
+			justify-content: space-between;
+			padding-right: 1vh;
+			height: fit-content;
+			margin-left: calc((100vw - 100vh) / 6 * (-1));
+			padding-left: calc((100vw - 100vh) / 6);
+			animation: animSlideLeft 2s ease 0s 1 normal forwards;
+
+			&__p {
+				font-size: calc(1.5rem + 0.9vmin);
+				margin: 1vh 2vh 1vh 0;
+				text-align: center;
+
+				&__span {
+					display: inline-block;
+				}
+			}
+		}
+
+		&__contacts {
+			grid-area: contacts;
+			padding-left: 0;
+			margin-top: 0;
+			height: fit-content;
+
+			&__title {
+				font-size: calc(1.5rem + 0.9vmin);
+				color: $orange-dark;
+			}
+
+			&__contact-data {
+				font-size: calc(0.75rem + 0.8vmin);
+				color: $violet;
+			}
+		}
+
+		&__logo {
+			grid-area: logo;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-grow: 0;
+			width: fit-content;
+
+			&__img {
+				height: 14vh;
+				width: auto;
+			}
+		}
+	}
+
+	.info-about {
+		padding: 7vh 2vh 5vh 0;
+		height: fit-content;
+		&__title {
+			font-size: calc(1.5rem + 0.9vmin);
+		}
+		&__text {
+			font-size: calc(0.75rem + 0.8vmin);
+			margin-top: 3vh;
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// DESKTOP - WIDE
+@media screen and (min-width: 1367px) {
+	.info-container {
+		padding: 0 calc((100vw - 100vh) / 3);
+	}
+
+	.info-data {
+		&__hours {
+			margin-left: calc((100vw - 100vh) / 3 * (-1));
+			padding-left: calc((100vw - 100vh) / 3);
+		}
+
+		&__contacts {
+			padding-left: 0;
+		}
+	}
+}

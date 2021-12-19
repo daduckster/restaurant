@@ -48,6 +48,16 @@ body {
 	}
 }
 
+@keyframes animSlideRight {
+	0% {
+		transform: translateX(+150px);
+	}
+
+	100% {
+		transform: translateX(0px);
+	}
+}
+
 @keyframes animHoverMenu {
 	0% {
 		transform: translateX(0px);
