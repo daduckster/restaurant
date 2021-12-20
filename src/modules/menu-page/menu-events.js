@@ -1,4 +1,4 @@
-import { removeCurrentPage, loadHomePage, loadInfoPage } from '/src/index';
+import { removeCurrentPage, loadHomePage, loadInfoPage, toggleMobileMenu } from '/src/index';
 
 const addMenuPageEventListeners = function() {
 	const allMenuPageMobileLinks = document.querySelectorAll('.menu-navbar-mobile__ul__li');
@@ -12,6 +12,8 @@ const addMenuPageEventListeners = function() {
 	const menuPageDesktopAboutLink = document.querySelector('.menu-desktop-about-link');
 	const menuPageDesktopHoursLink = document.querySelector('.menu-desktop-hours-link');
 	const menuPageDesktopContactLink = document.querySelector('.menu-desktop-contact-link');
+
+	const hamburgerMenu = document.querySelector('.menu-hamburger');
 
 	allMenuPageMobileLinks.forEach(link => {
 		link.addEventListener('click', removeCurrentPage);
@@ -28,6 +30,8 @@ const addMenuPageEventListeners = function() {
 	menuPageDesktopAboutLink.addEventListener('click', loadInfoPage);
 	menuPageDesktopHoursLink.addEventListener('click', loadInfoPage);
 	menuPageDesktopContactLink.addEventListener('click', loadInfoPage);
+
+	hamburgerMenu.addEventListener('click', toggleMobileMenu);
 };
 
 export default addMenuPageEventListeners;

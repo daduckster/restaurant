@@ -35,4 +35,9 @@ function loadInfoPage() {
 	infoEvents();
 }
 
-export { removeCurrentPage, loadHomePage, loadMenuPage, loadInfoPage };
+function toggleMobileMenu() {
+	const mobileMenu = document.querySelector('.menu-navbar-mobile');
+	mobileMenu.classList.toggle('hidden');
+}
+
+export { removeCurrentPage, loadHomePage, loadMenuPage, loadInfoPage, toggleMobileMenu };

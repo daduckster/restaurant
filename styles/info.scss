@@ -232,7 +232,7 @@
 			grid-area: hours;
 			flex-direction: row;
 			justify-content: space-between;
-			padding-right: 1vh;
+			padding-right: 0;
 			height: fit-content;
 			margin-left: calc((100vw - 100vh) / 6 * (-1));
 			padding-left: calc((100vw - 100vh) / 6);
@@ -245,6 +245,7 @@
 
 				&__span {
 					display: inline-block;
+					margin: 0 1vh;
 				}
 			}
 		}

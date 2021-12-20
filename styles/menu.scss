@@ -564,7 +564,7 @@
 		margin-right: 4vw;
 		height: 6.5vh;
 		&__header-text {
-			font-size: 3.2vh;
+			font-size: calc(1.5rem + 0.9vmin);
 		}
 	}
 
@@ -589,18 +589,18 @@
 		}
 
 		&__header {
-			margin-bottom: 1vh;
+			margin-bottom: calc(1rem + 0.9vmin);
 		}
 
 		&__position {
 			margin-top: 1.7vh;
 			&__name {
-				font-size: 1.9vh;
+				font-size: calc(0.75rem + 0.6vmin);
 				width: 60%;
 			}
 
 			&__price {
-				font-size: 1.9vh;
+				font-size: calc(0.75rem + 0.6vmin);
 			}
 		}
 

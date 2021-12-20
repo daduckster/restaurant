@@ -137,7 +137,7 @@ const createInfoDom = function() {
 	infoAboutPFirst.textContent = `‘Fresh & Light’ Restaurants are well known with a substantial gathering of people
   including families, kids, seniors, and business experts. Our benevolent condition is perfect for praising unique
   events, facilitating a business lunch, or assembling for a flavorful dinner with loved ones.`;
-	infoAboutPSecond.textContent = `Open day by day for lunch and dinner, ’Fresg & Light’ offers a choice of naturally
+	infoAboutPSecond.textContent = `Open day by day for lunch and dinner, ’Fresh & Light’ offers a choice of naturally
   arranged things utilizing just the best fixings accessible.`;
 
 	infoLogoMobileImg.src = '/styles/images/logo.svg';
