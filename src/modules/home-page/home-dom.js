@@ -1,11 +1,9 @@
 const createHomeDom = function() {
-	// const pageContainer = document.querySelector('.page-container');
+	const pageContainer = document.querySelector('.page-container');
 
 	//CREATING ELEMENTS
 	const homeContainer = document.createElement('div');
-
 	const welcomeImg = document.createElement('img');
-
 	const footer = document.createElement('div');
 	const footerPFirst = document.createElement('p');
 	const footerPSecond = document.createElement('p');
@@ -15,7 +13,10 @@ const createHomeDom = function() {
 
 	const homeMenu = document.createElement('div');
 	const homeMenuUl = document.createElement('ul');
-	const homeMenuLiImg = document.createElement('img');
+	const homeMenuLiImgMenu = document.createElement('img');
+	const homeMenuLiImgAbout = document.createElement('img');
+	const homeMenuLiImgHours = document.createElement('img');
+	const homeMenuLiImgContact = document.createElement('img');
 	const homeMenuLiMenu = document.createElement('li');
 	const homeMenuLiAbout = document.createElement('li');
 	const homeMenuLiHours = document.createElement('li');
@@ -43,11 +44,18 @@ const createHomeDom = function() {
 
 	homeMenu.classList.add('home-menu');
 	homeMenuUl.classList.add('home-menu__ul');
-	homeMenuLiImg.classList.add('home-menu__ul__img');
+	homeMenuLiImgMenu.classList.add('home-menu__ul__img');
+	homeMenuLiImgAbout.classList.add('home-menu__ul__img');
+	homeMenuLiImgHours.classList.add('home-menu__ul__img');
+	homeMenuLiImgContact.classList.add('home-menu__ul__img');
 	homeMenuLiMenu.classList.add('home-menu__ul__li');
+	homeMenuLiMenu.classList.add('home-menu-link');
 	homeMenuLiAbout.classList.add('home-menu__ul__li');
+	homeMenuLiAbout.classList.add('home-about-link');
 	homeMenuLiHours.classList.add('home-menu__ul__li');
+	homeMenuLiHours.classList.add('home-hours-link');
 	homeMenuLiContact.classList.add('home-menu__ul__li');
+	homeMenuLiContact.classList.add('home-contact-link');
 
 	homeImage.classList.add('home-image');
 	homeImagePhoto.classList.add('home-image__photo');
@@ -67,8 +75,14 @@ const createHomeDom = function() {
 	homeLogoImg.src = '/styles/images/logo.svg';
 	homeLogoImg.alt = 'logo-with-letters-f-and-l';
 
-	homeMenuLiImg.src = '/styles/images/menu-arrow.svg';
-	homeMenuLiImg.alt = 'icon-arrow-right';
+	homeMenuLiImgMenu.src = '/styles/images/menu-arrow.svg';
+	homeMenuLiImgAbout.src = '/styles/images/menu-arrow.svg';
+	homeMenuLiImgHours.src = '/styles/images/menu-arrow.svg';
+	homeMenuLiImgContact.src = '/styles/images/menu-arrow.svg';
+	homeMenuLiImgMenu.alt = 'icon-arrow-right';
+	homeMenuLiImgAbout.alt = 'icon-arrow-right';
+	homeMenuLiImgHours.alt = 'icon-arrow-right';
+	homeMenuLiImgContact.alt = 'icon-arrow-right';
 	homeMenuLiMenu.textContent = 'Menu';
 	homeMenuLiAbout.textContent = 'About Us';
 	homeMenuLiHours.textContent = 'Working Hours';
@@ -85,10 +99,10 @@ const createHomeDom = function() {
 
 	homeLogo.appendChild(homeLogoImg);
 
-	homeMenuLiMenu.appendChild(homeMenuLiImg);
-	homeMenuLiAbout.appendChild(homeMenuLiImg);
-	homeMenuLiHours.appendChild(homeMenuLiImg);
-	homeMenuLiContact.appendChild(homeMenuLiImg);
+	homeMenuLiMenu.appendChild(homeMenuLiImgMenu);
+	homeMenuLiAbout.appendChild(homeMenuLiImgAbout);
+	homeMenuLiHours.appendChild(homeMenuLiImgHours);
+	homeMenuLiContact.appendChild(homeMenuLiImgContact);
 	homeMenuUl.appendChild(homeMenuLiMenu);
 	homeMenuUl.appendChild(homeMenuLiAbout);
 	homeMenuUl.appendChild(homeMenuLiHours);
@@ -108,7 +122,7 @@ const createHomeDom = function() {
 	homeContainer.appendChild(homeImage);
 	homeContainer.appendChild(homeName);
 
-	// pageContainer.appendChild(homeContainer);
+	pageContainer.appendChild(homeContainer);
 };
 
-export { createHomeDom };
+export default createHomeDom;

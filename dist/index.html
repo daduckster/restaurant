@@ -37,19 +37,19 @@
     <div class="home-menu">
       <ul class="home-menu__ul">
 
-        <li class="home-menu__ul__li"> Menu <img class="home-menu__ul__img" src="/styles/images/menu-arrow.svg"
+        <li class="home-menu__ul__li home-menu-link"> Menu <img class="home-menu__ul__img" src="/styles/images/menu-arrow.svg"
                alt="icon-arrow-right">
         </li>
 
-        <li class="home-menu__ul__li"> About Us <img class="home-menu__ul__img" src="/styles/images/menu-arrow.svg"
+        <li class="home-menu__ul__li home-about-link"> About Us <img class="home-menu__ul__img" src="/styles/images/menu-arrow.svg"
                alt="icon-arrow-right">
         </li>
 
-        <li class="home-menu__ul__li"> Working Hours <img class="home-menu__ul__img" src="/styles/images/menu-arrow.svg"
+        <li class="home-menu__ul__li home-hours-link"> Working Hours <img class="home-menu__ul__img" src="/styles/images/menu-arrow.svg"
                alt="icon-arrow-right">
         </li>
 
-        <li class="home-menu__ul__li"> Contact <img class="home-menu__ul__img" src="/styles/images/menu-arrow.svg"
+        <li class="home-menu__ul__li home-contact-link"> Contact <img class="home-menu__ul__img" src="/styles/images/menu-arrow.svg"
                alt="icon-arrow-right">
         </li>
       </ul>
@@ -77,20 +77,29 @@
 
   <!-- <div class="menu-container">
 
+    <img class="menu-container__welcome" src="/styles/images/welcome.svg" alt="word-welcome-on-the-background">
+
+    <div class="menu-container__footer">
+      <p class="menu-container__footer__p">© 2021 by Olya Vlasak (Front-End, UI/UX Design)</p>
+      <p class="menu-container__footer__p">vlasakolga@gmail.com</p>
+    </div>
+
+    <div class="menu-container__buffer"></div>
+
     <div class="menu-navbar-mobile hidden">
       <div class="menu-navbar-mobile__darken"></div>
       <div class="menu-navbar-mobile__container">
         <ul class="menu-navbar-mobile__ul">
-          <li class="menu-navbar-mobile__ul__li"> <img class="menu-navbar-mobile__ul__img"
+          <li class="menu-navbar-mobile__ul__li menu-mobile-home-link"> <img class="menu-navbar-mobile__ul__img"
                  src="/styles/images/menu-arrow-orange.svg" alt="icon-arrow-right"> Home </li>
 
-          <li class="menu-navbar-mobile__ul__li"> <img class="menu-navbar-mobile__ul__img"
+          <li class="menu-navbar-mobile__ul__li menu-mobile-about-link"> <img class="menu-navbar-mobile__ul__img"
                  src="/styles/images/menu-arrow-orange.svg" alt="icon-arrow-right"> About Us </li>
 
-          <li class="menu-navbar-mobile__ul__li"> <img class="menu-navbar-mobile__ul__img"
+          <li class="menu-navbar-mobile__ul__li menu-mobile-hours-link"> <img class="menu-navbar-mobile__ul__img"
                  src="/styles/images/menu-arrow-orange.svg" alt="icon-arrow-right"> Working Hours</li>
 
-          <li class="menu-navbar-mobile__ul__li"> <img class="menu-navbar-mobile__ul__img"
+          <li class="menu-navbar-mobile__ul__li menu-mobile-contact-link"> <img class="menu-navbar-mobile__ul__img"
                  src="/styles/images/menu-arrow-orange.svg" alt="icon-arrow-right"> Contact </li>
         </ul>
       </div>
@@ -102,10 +111,10 @@
 
     <div class="menu-navbar-desktop">
       <ul class="menu-navbar-desktop__ul">
-        <li class="menu-navbar-desktop__ul__li"> Home </li>
-        <li class="menu-navbar-desktop__ul__li"> About Us </li>
-        <li class="menu-navbar-desktop__ul__li"> Working Hours </li>
-        <li class="menu-navbar-desktop__ul__li"> Contact </li>
+        <li class="menu-navbar-desktop__ul__li menu-desktop-home-link"> Home </li>
+        <li class="menu-navbar-desktop__ul__li menu-desktop-about-link"> About Us </li>
+        <li class="menu-navbar-desktop__ul__li menu-desktop-hours-link"> Working Hours </li>
+        <li class="menu-navbar-desktop__ul__li menu-desktop-contact-link"> Contact </li>
       </ul>
     </div>
 
@@ -240,15 +249,6 @@
 
     </div>
 
-    <img class="menu-container__welcome" src="/styles/images/welcome.svg" alt="word-welcome-on-the-background">
-
-    <div class="menu-container__footer">
-      <p class="menu-container__footer__p">© 2021 by Olya Vlasak (Front-End, UI/UX Design)</p>
-      <p class="menu-container__footer__p">vlasakolga@gmail.com</p>
-    </div>
-
-    <div class="menu-container__buffer"></div>
-
   </div> -->
 
   <!-- * MENU PAGE END //////////////////////////////-->
@@ -261,19 +261,21 @@
 
   <!-- <div class="info-container">
 
-    <div class="info-container__image-container">
-      <img class="info-container__image-container__img" src="/styles/images/info-photo-desktop.png"
-           alt="photo-of-the-restaurant">
+    <img class="menu-container__welcome" src="/styles/images/welcome.svg" alt="word-welcome-on-the-background">
+
+    <div class="menu-container__footer">
+      <p class="menu-container__footer__p">© 2021 by Olya Vlasak (Front-End, UI/UX Design)</p>
+      <p class="menu-container__footer__p">vlasakolga@gmail.com</p>
     </div>
 
     <div class="menu-navbar-mobile hidden">
       <div class="menu-navbar-mobile__darken"></div>
       <div class="menu-navbar-mobile__container">
         <ul class="menu-navbar-mobile__ul">
-          <li class="menu-navbar-mobile__ul__li"> <img class="menu-navbar-mobile__ul__img"
+          <li class="menu-navbar-mobile__ul__li info-mobile-home-link"> <img class="menu-navbar-mobile__ul__img"
                  src="/styles/images/menu-arrow-orange.svg" alt="icon-arrow-right"> Home </li>
 
-          <li class="menu-navbar-mobile__ul__li"> <img class="menu-navbar-mobile__ul__img"
+          <li class="menu-navbar-mobile__ul__li info-mobile-menu-link"> <img class="menu-navbar-mobile__ul__img"
                  src="/styles/images/menu-arrow-orange.svg" alt="icon-arrow-right"> Menu </li>
 
         </ul>
@@ -286,9 +288,14 @@
 
     <div class="menu-navbar-desktop">
       <ul class="menu-navbar-desktop__ul">
-        <li class="menu-navbar-desktop__ul__li"> Home </li>
-        <li class="menu-navbar-desktop__ul__li"> Menu </li>
+        <li class="menu-navbar-desktop__ul__li info-desktop-home-link"> Home </li>
+        <li class="menu-navbar-desktop__ul__li info-desktop-menu-link"> Menu </li>
       </ul>
+    </div>
+
+    <div class="info-container__image-container">
+      <img class="info-container__image-container__img" src="/styles/images/info-photo-desktop.png"
+           alt="photo-of-the-restaurant">
     </div>
 
     <div class="info-data">
@@ -322,13 +329,6 @@
 
     <div class="info-logo-mobile">
       <img class="info-logo-mobile__img" src="/styles/images/logo.svg" alt="logo-with-letters-f-and-l">
-    </div>
-
-    <img class="menu-container__welcome" src="/styles/images/welcome.svg" alt="word-welcome-on-the-background">
-
-    <div class="menu-container__footer">
-      <p class="menu-container__footer__p">© 2021 by Olya Vlasak (Front-End, UI/UX Design)</p>
-      <p class="menu-container__footer__p">vlasakolga@gmail.com</p>
     </div>
 
   </div> -->
