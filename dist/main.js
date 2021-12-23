@@ -266,7 +266,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"3cd8f6b6fb8836a9d259.png\";\n\n//# sourceURL=webpack://restaurant-page/./styles/images/home-photo-mobile.png?");
+eval("module.exports = __webpack_require__.p + \"d16e8922f870a328250b.png\";\n\n//# sourceURL=webpack://restaurant-page/./styles/images/home-photo-mobile.png?");
 
 /***/ }),
 
@@ -276,7 +276,7 @@ eval("module.exports = __webpack_require__.p + \"3cd8f6b6fb8836a9d259.png\";\n\n
   \*********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"8d8345a8b03eb7d30e72.png\";\n\n//# sourceURL=webpack://restaurant-page/./styles/images/home-photo-tablet.png?");
+eval("module.exports = __webpack_require__.p + \"7405baaba1b33554c199.png\";\n\n//# sourceURL=webpack://restaurant-page/./styles/images/home-photo-tablet.png?");
 
 /***/ }),
 
@@ -286,7 +286,7 @@ eval("module.exports = __webpack_require__.p + \"8d8345a8b03eb7d30e72.png\";\n\n
   \*********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"7bd405e3ea699e129c4c.png\";\n\n//# sourceURL=webpack://restaurant-page/./styles/images/info-photo-mobile.png?");
+eval("module.exports = __webpack_require__.p + \"eb129b714dd06fcd3ca2.png\";\n\n//# sourceURL=webpack://restaurant-page/./styles/images/info-photo-mobile.png?");
 
 /***/ }),
 
@@ -296,7 +296,7 @@ eval("module.exports = __webpack_require__.p + \"7bd405e3ea699e129c4c.png\";\n\n
   \*********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"4d7ed91fa3fc72bc554b.png\";\n\n//# sourceURL=webpack://restaurant-page/./styles/images/info-photo-tablet.png?");
+eval("module.exports = __webpack_require__.p + \"c907950b360afb24632b.png\";\n\n//# sourceURL=webpack://restaurant-page/./styles/images/info-photo-tablet.png?");
 
 /***/ }),
 
@@ -306,7 +306,7 @@ eval("module.exports = __webpack_require__.p + \"4d7ed91fa3fc72bc554b.png\";\n\n
   \*********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"93bf3d6d5d075b91dc07.png\";\n\n//# sourceURL=webpack://restaurant-page/./styles/images/menu-photo-mobile.png?");
+eval("module.exports = __webpack_require__.p + \"fa0130a831213d0e72ef.png\";\n\n//# sourceURL=webpack://restaurant-page/./styles/images/menu-photo-mobile.png?");
 
 /***/ })
 
